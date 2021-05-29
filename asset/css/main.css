@@ -1,0 +1,213 @@
+/* start css header */
+
+.header {
+    display: flex;
+    height: var(--header-height);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__navbar {
+    display: flex;
+}
+
+.header__navbar-list {
+    display: flex;
+    padding-left: 0;
+    margin-right: 15px;
+    position: relative;
+}
+
+.header__navbar-list::before {
+    content: "";
+    position: absolute;
+    border-left: 1px solid;
+    height: 30px;
+    right: -22px;
+    bottom: 5px;
+    border-color: darkgrey;
+}
+
+.header__navbar-item {
+    list-style: none;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.header__navbar-item ~ .header__navbar-item {
+    margin-left: 30px;
+}
+
+.header__navbar-item-link {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.header__navbar-item-link.active {
+    color: var(--primary-color);
+}
+
+.header__navbar-item:hover .header__navbar-item-link{
+    color: var(--primary-color);
+}
+
+.header__navbar-item:hover .header__navbar-item-link-icon {
+    transform: rotate(180deg);
+}
+
+.header__navbar-item:hover .header__navbar-item-dropdown {
+    display: block;
+}
+
+.header__navbar-item-link-icon {
+    font-size: 10px;
+    transition: 0.4s;
+}
+
+.header__action {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.header__action em {
+    font-size: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.header__action-account {
+    position: relative;
+}
+
+/* start drop down */
+.header__navbar-item-dropdown {
+    position: absolute;
+    min-width: 120px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    top: calc(var(--header-height) - (var(--header-height) - 40px) / 2);
+    display: none;
+}
+
+.header__navbar-item-dropdown::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    min-width: 200px;
+    background-color: transparent;
+    top: -40px;
+    cursor: default;
+}
+
+.dropdown__content {
+    padding: 0 20px;
+    min-width: 200px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.dropdown__content ~ .dropdown__content {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown__content:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown__content:hover .dropdown__content-link{
+    color: var(--primary-color);
+}
+
+.dropdown__content-link {
+    font-size: 1.4rem;
+}
+
+.header__action-dropdown {
+    position: absolute;
+    top: calc(var(--header-height) - (var(--header-height) - 26px) / 2);
+    right: -20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 20px 15px 15px;
+}
+
+.action__dropdown-header {
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.action__dropdown-title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    align-self: center;
+}
+
+.action__dropdown-content {
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.action__dropdown-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.action__dropdown-email {
+    margin-bottom: 8px;
+    padding: 15px 10px 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.action__dropdown-password {
+    padding: 15px 10px 3px;
+    border-radius: 3px;
+    padding: 15px 10px 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.form-submit-login a {
+    text-decoration: none;
+    color: #2962ff;
+    font-size: 1.3rem;
+}
+
+.form-submit-login p {
+    font-size: 1.3rem;
+}
+
+.action__dropdown-recaptcha {
+    margin-bottom: 15px;
+}
+
+.popover-secondary-action a {
+    color: var(--primary-color);
+}
+
+.popover-secondary-action {
+    margin: 15px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popover-secondary-action p {
+    margin: 0 0 8px;
+}
+/* end drop down */
+
+/* end css header */
