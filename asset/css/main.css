@@ -5,6 +5,8 @@
     height: var(--header-height);
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
+    background: var(--white-color);
 }
 
 .header__navbar {
@@ -61,6 +63,7 @@
 }
 
 .header__navbar-item:hover .header__navbar-item-dropdown {
+    animation: top-to-bot_dropdown 0.3s linear forwards;
     display: block;
 }
 
@@ -85,14 +88,20 @@
     position: relative;
 }
 
+.header__action-account:hover .header__action-dropdown{
+    display: block;
+}
+
 /* start drop down */
 .header__navbar-item-dropdown {
     position: absolute;
     min-width: 120px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-    top: calc(var(--header-height) - (var(--header-height) - 40px) / 2);
+    top: -100px;
     display: none;
+    transition: 1s;
+    z-index: -1;
 }
 
 .header__navbar-item-dropdown::before {
@@ -131,10 +140,34 @@
 .header__action-dropdown {
     position: absolute;
     top: calc(var(--header-height) - (var(--header-height) - 26px) / 2);
-    right: -20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    right: -60px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     width: 320px;
     padding: 20px 15px 15px;
+    z-index: 1;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    animation: zoom-in 0.5s linear forwards;
+    display: none;
+}
+
+.header__action-dropdown::before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent rgb(211, 206, 206) transparent;
+    top: -20px;
+    right: 60px;
+}
+
+.header__action-dropdown::after {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 50px;
+    background-color: transparent   ;
+    top: -35px;
+    right: 50px;
 }
 
 .action__dropdown-header {
@@ -208,6 +241,39 @@
 .popover-secondary-action p {
     margin: 0 0 8px;
 }
+
+.btn-submit {
+    width: 300px;
+    height: 40px;
+    transition: 1s;
+}
+
+.btn-submit:hover::after, .btn-submit:hover::before {
+    width: 300px;
+}
 /* end drop down */
 
 /* end css header */
+
+
+/* btn hover */
+
+@keyframes top-to-bot_dropdown {
+    from {
+        top: -50px;
+    }
+    to {
+        top: calc(var(--header-height) - (var(--header-height) - 40px) / 2);;
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        scale: 0;
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

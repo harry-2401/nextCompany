@@ -18,17 +18,39 @@ html {
 
 .btn {
     background: var(--primary-color);
-    transition: 0.5s;
     position: relative;
     outline: none;
     color: var(--white-color);
     text-transform: uppercase;
     border: none;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
 
-.btn::before {
+.btn-submit::before, .btn-more::before {
     content: "";
+    position: absolute;
     right: 0;
     top: 0;
-    
+    background: var(--white-color);
+    opacity: 0.3;
+    height: 20px;
+    width: 0;
+    transition: 0.5s;
+}
+
+.btn-submit::after, .btn-more::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--white-color);
+    opacity: 0.3;
+    height: 20px;
+    width: 0;
+    transition: 0.5s;
 }
