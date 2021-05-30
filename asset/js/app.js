@@ -1,12 +1,18 @@
 var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
 
 const headerActionAccountDropDown = $('.header__action-account-dropdown');
 const headerActionSearchDropDown = $('.header__action-search-dropdown');
 const headerActionAccount = $('.header__action-account');
 const headerActionSearch = $('.header__action-search');
 const html = $('html');
+const sliderContentWrap = $$('.slider__content-wrap');
+const buttonSliderNext = $('.slider__button-next');
+const buttonSliderPre = $('.slider__button-pre');
+const buttonDotSlider = $$('.slider__dot-item');
 
 const app = {
+    currentIndexImgSlider: 1,
     handlerEvent: function() {
         
     },
@@ -38,9 +44,81 @@ const app = {
             headerActionSearchDropDown.classList.remove('active');
         };
     },
+    handlerEventSlider: function() {
+        const _this = this;
+        //when user click to button dot
+        Array.from(buttonDotSlider).forEach((value, index) => {
+            value.onclick = function() {
+                _this.removeSlider();
+                _this.removeBoxShadowButtonSlider();
+                _this.currentIndexImgSlider = index + 1;
+                _this.loadSlider();
+                _this.loadBoxShadowButtonSlider();
+            }
+        });
+
+        //when user click to button previous
+        buttonSliderPre.onclick = function() {
+            _this.removeSlider();
+            _this.removeBoxShadowButtonSlider();
+            if(_this.currentIndexImgSlider === 1) {
+                _this.currentIndexImgSlider = 3;
+            }
+            else _this.currentIndexImgSlider--;
+            _this.loadSlider();
+            _this.loadBoxShadowButtonSlider();
+        }
+
+        
+        //when user click to button next
+        buttonSliderNext.onclick = function() {
+            _this.removeSlider();
+            _this.removeBoxShadowButtonSlider();
+            if(_this.currentIndexImgSlider === 3) {
+                _this.currentIndexImgSlider = 1;
+            }
+            else _this.currentIndexImgSlider++;
+            _this.loadSlider();
+            _this.loadBoxShadowButtonSlider();
+        }
+    },
+    //this is function to do load slider
+    loadSlider: function() {
+        const _this = this;
+        Array.from(sliderContentWrap).forEach((value, index) => {
+            if(_this.currentIndexImgSlider === index + 1) {
+                value.classList.add('active');
+            }
+        });
+    },
+    removeSlider: function() {
+        const _this = this;
+        Array.from(sliderContentWrap).forEach((value, index) => {
+            if(_this.currentIndexImgSlider === index + 1) {
+                value.classList.remove('active');
+            }
+        });
+    },
+    loadBoxShadowButtonSlider: function() {
+        const _this = this;
+        Array.from(buttonDotSlider).forEach((value, index) => {
+            if(_this.currentIndexImgSlider === index + 1) {
+                value.classList.add('active');
+            }
+        });
+    },
+    removeBoxShadowButtonSlider: function() {
+        const _this = this;
+        Array.from(buttonDotSlider).forEach((value, index) => {
+            if(_this.currentIndexImgSlider === index + 1) {
+                value.classList.remove('active');
+            }
+        });
+    },
     start: function() {
         this.handlerEvent();
         this.handlerEventHeader();
+        this.handlerEventSlider();
     }
 }
 
