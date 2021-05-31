@@ -54,3 +54,42 @@ html {
     width: 0;
     transition: 0.5s;
 }
+
+
+.service__btn-more span,
+.slider-img__btn-more span,
+.intro__btn-more span,
+.about__btn-more span {
+    position: absolute;
+    height: 2px;
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    right: 10px;
+    transition: 0.5s;
+}
+
+.service__btn-more,
+.slider-img__btn-more,
+.intro__btn-more,
+.about__btn-more {
+    position: relative;
+    padding-right: 50px;
+    height: 100%;
+}
+
+.lazyload {
+    background-image: url(//theme.hstatic.net/1000387172/1000670825/14/h-prl-one_bg.jpg?v=121);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.lazyload::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+}
