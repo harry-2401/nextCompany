@@ -93,3 +93,8 @@ html {
     background-color: rgba(0, 0, 0, 0.4);
     top: 0;
 }
+
+.lazyload-two {
+    background: url(//theme.hstatic.net/1000387172/1000670825/14/bkg-banner-section.png?v=121);
+    background-attachment: fixed;
+}

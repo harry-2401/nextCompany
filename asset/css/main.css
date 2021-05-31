@@ -1,5 +1,4 @@
 /* start css header */
-
 .header {
     display: flex;
     height: var(--header-height);
@@ -504,7 +503,8 @@
     line-height: 1.6;
 }
 
-.intro__time {
+.intro__time,
+.blog__popular {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -513,12 +513,15 @@
     border-right: 10px solid var(--primary-color);
 }
 
-.intro__time strong {
-    font-size: 10rem;
+.intro__time strong,
+.blog__popular strong {
+    text-transform: uppercase;
+    font-size: 8rem;
     color: rgba(0, 0, 0, 0.1);
 }
 
-.intro__time span {
+.intro__time span,
+.blog__popular span {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -751,6 +754,10 @@
 /* end parallax section */
 
 /* start policy section */
+.policy {
+    background-color: var(--white-color);
+}
+
 .policy__container {
     padding: 90px 0;
 }
@@ -803,10 +810,163 @@
 /* start whatwedo section */
 .whatwedo {
     padding: 90px 0;
+    background-color: #f6f7f8;
+}
+
+.graph__service,
+.graph__new-technology,
+.graph__satisfied,
+.graph__quality {
+    height: 30px;
+    background: rgba(0, 0, 0, 0.09);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.graph__service .graph__percent{
+    --width-graph: 95%;
+    animation: graph 3s linear forwards;
+}
+
+.graph__new-technology .graph__percent {
+    --width-graph: 80%;
+    animation: graph 3s linear forwards;
+}
+
+.graph__satisfied .graph__percent {
+    --width-graph: 75%;
+    animation: graph 3s linear forwards;
+}
+
+.graph__quality .graph__percent {
+    --width-graph: 60%;
+    animation: graph 3s linear forwards;
+}
+
+.graph__title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 900;    
+    padding-bottom: 5px;
+}
+
+.graph__percent {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: var(--primary-color);
+}
+
+.graph__percent h2 {
+    margin: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 35px;
+    width: 0;
+    font-weight: 900;
+    font-size: 1.4rem;
+    line-height: 30px;
+    color: var(--white-color);
+}
+
+.whatwedo__desc {
+    padding-left: 40px;
+}
+
+.whatwedo__desc p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.desc__title {
+    margin-top: 0;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+/* end whatwedo section */
+/* start blog section */
+.blog {
+    padding: 90px 0;
+}
+
+.blog__title {
+    text-transform: uppercase;
+    padding-bottom: 25px;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.blog__post {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.blog__desc {
+    position: absolute;
+    padding: 20px;
+    left: 30px;
+    bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 290px;
+    cursor: pointer;
+}
+
+.blog__desc-title {
+    font-size: 2rem;
+}
+
+.blog__desc-time {
+    font-size: 1.5rem;
+}
+
+.blog__post-img-wrap {
+    display: block;
+}
+
+.blog__post-img {
+    width: 100%;
+}
+/* end blog section */
+/* start video section */
+.video {
+    padding: 90px 0;
 }
 
 
-/* end whatwedo section */
+.video__wrap {
+    position: relative;
+}
+
+.video__wrap:hover .video__btn-wrap {
+    font-size: 3rem;
+    opacity: 0.7;
+}
+
+.video__btn-wrap {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1rem);
+    font-size: 2rem;
+    color: white;
+    transition: 1s;
+}
+
+.video-btn {
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.video__img {
+    width: 100%;
+    cursor: pointer;
+}
+/* end video section */
 
 @keyframes top-to-bot_dropdown {
     from {
@@ -851,5 +1011,14 @@
     to {
         opacity: 1;
         transform: scale(1.1);
+    }
+}
+
+@keyframes graph {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--width-graph);
     }
 }
