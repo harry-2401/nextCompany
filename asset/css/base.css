@@ -59,7 +59,8 @@ html {
 .service__btn-more span,
 .slider-img__btn-more span,
 .intro__btn-more span,
-.about__btn-more span {
+.about__btn-more span,
+.project__btn-more span {
     position: absolute;
     height: 2px;
     width: 5px;
@@ -72,7 +73,8 @@ html {
 .service__btn-more,
 .slider-img__btn-more,
 .intro__btn-more,
-.about__btn-more {
+.about__btn-more,
+.project__btn-more {
     position: relative;
     padding-right: 50px;
     height: 100%;

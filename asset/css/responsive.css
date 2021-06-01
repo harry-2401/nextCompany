@@ -1,0 +1,13 @@
+@media (min-width: 768) and (max-width: 1239px) {
+    .header__navbar-item-link {
+        font-size: 1.2rem;
+    }
+
+    .slider-img__title {
+        font-size: 2.2rem;
+    }
+
+    html {
+        font-size: 40%;
+    }
+}
