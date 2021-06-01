@@ -21,12 +21,13 @@ const app = {
     },
     handlerWidthHeightImg: function() {
         //when changle width screen
-        if(screen.width < 768) {
-            const height = screen.height;
-            Array.from(slideImg).forEach((value) => {
-            value.style.height = height * 0.7 + 'px';
-            });
-        }
+            console.log(1)
+            if(screen.width < 768) {
+                const height = screen.height;
+                Array.from(slideImg).forEach((value) => {
+                value.style.height = height * 0.7 + 'px';
+                });
+            }
     },
     handlerCounter: function() {
         
