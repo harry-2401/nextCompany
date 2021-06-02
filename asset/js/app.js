@@ -10,25 +10,54 @@ const sliderContentWrap = $$('.slider__content-wrap');
 const buttonSliderNext = $('.slider__button-next');
 const buttonSliderPre = $('.slider__button-pre');
 const buttonDotSlider = $$('.slider__dot-item');
-
+const headerIconMenuMobile = $('.header__navbar-mobile-icon-wrap');
+const headerNavbarList = $('.header__navbar-list');
+const slideImg = $$('.slider__img');
 const app = {
     currentIndexImgSlider: 1,
     handlerEvent: function() {
         
+
+    },
+    handlerWidthHeightImg: function() {
+        //when changle width screen
+        if(screen.width < 768) {
+            const height = screen.height;
+            Array.from(slideImg).forEach((value) => {
+            value.style.height = height * 0.7 + 'px';
+            });
+        }
+    },
+    handlerCounter: function() {
+        
     },
     handlerEventHeader: function() {
+        //when user click to mobile menu
+        headerIconMenuMobile.addEventListener('click', (e) => {
+            e.stopPropagation();
+            headerNavbarList.classList.toggle('active');
+            headerActionAccountDropDown.classList.remove('active');
+            headerActionSearchDropDown.classList.remove('active');
+        });
+
         //when user click to icon user
         headerActionAccount.addEventListener("click", (e) => {
             e.stopPropagation();
             headerActionAccountDropDown.classList.toggle('active');
             headerActionSearchDropDown.classList.remove('active');
+            headerNavbarList.classList.remove('active');
         });
 
         headerActionSearch.addEventListener(('click'), (e) => {
             e.stopPropagation()
             headerActionSearchDropDown.classList.toggle('active');
             headerActionAccountDropDown.classList.remove('active');
+            headerNavbarList.classList.remove('active');
         });
+
+        headerNavbarList.onclick = function(e) {
+            e.stopPropagation();
+        };
 
         headerActionAccountDropDown.onclick = function(e) {
             e.stopPropagation();
@@ -119,6 +148,7 @@ const app = {
         this.handlerEvent();
         this.handlerEventHeader();
         this.handlerEventSlider();
+        this.handlerWidthHeightImg();
     }
 }
 

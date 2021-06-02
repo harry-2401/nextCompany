@@ -18,15 +18,20 @@
     <!-- start header section -->
     <div class="grid wide">
         <section class="header">
-            <div class="header__logo">
-                <img src="./asset/img/logo.png" alt="logo" class="header__logo-img">
+            <div class="header__navbar-mobile-icon-wrap">
+                <i class="fas fa-bars"></i>
             </div>
+
+            <a href="/" class="header__logo">
+                <img src="./asset/img/logo.png" alt="logo" class="header__logo-img">
+            </a>
     
             <div class="header__navbar">
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item">
                         <a href="" class="header__navbar-item-link active">
                             trang chủ
+                            <em class="header__navbar-mobile-icon-right fas fa-angle-double-right"></em>
                             <em class="header__navbar-item-link-icon fas fa-chevron-down"></em>
                         </a>
 
@@ -48,6 +53,7 @@
                     <li class="header__navbar-item">
                         <a href="" class="header__navbar-item-link">
                             giới thiệu
+                            <em class="header__navbar-mobile-icon-right fas fa-angle-double-right"></em>
                             <em class="header__navbar-item-link-icon fas fa-chevron-down"></em>
                         </a>
 
@@ -79,6 +85,7 @@
                     <li class="header__navbar-item">
                         <a href="" class="header__navbar-item-link">
                             chi tiết dự án
+                            <em class="header__navbar-mobile-icon-right fas fa-angle-double-right"></em>
                             <em class="header__navbar-item-link-icon fas fa-chevron-down"></em>
                         </a>
 
@@ -109,7 +116,7 @@
                         </a>
                     </li>
                 </ul>
-    
+
                 <div class="header__action">
                     <div class="header__action-account">
                         <em class="far fa-user"></em>
@@ -125,25 +132,25 @@
                                         Nhập email và mật khẩu của bạn
                                     </div>
                                 </div>
-
+    
                                 <div class="action-account__dropdown-input">
                                     <input class="action-account__dropdown-email" placeholder="Email" type="email">
                                     <input type="password" placeholder="Password" class="action-account__dropdown-password">
                                 </div>
-
+    
                                 <p class="action-account__dropdown-recaptcha">
                                     This site is protected by reCAPTCHA and the Google
                                     <a href="">Privacy Policy</a> and
                                     <a href="">Terms of Service</a> apply.
                                 </p>
-
+    
                                 <button class="btn btn-submit">Đăng nhập</button>
-
+    
                                 <div class="popover-secondary-action">
                                     <p>Khách hàng mới? 
                                         <a href="">Tạo tài khoản</a>
                                     </p>
-
+    
                                     <p>Quên mật khẩu?
                                         <a href="">Khôi phục mật khẩu</a>
                                     </p>
@@ -154,12 +161,12 @@
         
                     <div class="header__action-search">
                         <em class="fas fa-search"></em>
-
+    
                         <div class="header__action-search-dropdown">
                             <p class="action-search__dropdown-title">
                                 tìm kiếm
                             </p>
-
+    
                             <div class="action-search__dropdown-input">
                                 <input type="text" placeholder="Tìm kiếm dự án...">
                                 <div class="action-search__input-icon-wrap">
@@ -248,12 +255,12 @@
     <section class="intro">
         <div class="grid wide">
             <div class="intro__container row">
-                <div class="intro__title col c-4">
+                <div class="intro__title col l-4 m-5 c-12">
                     <span>Giới thiệu</span>
                     <h2>Công ty thiết kế - Sản xuất nội thất</h2>
                 </div>
 
-                <div class="intro__content col c-8">
+                <div class="intro__content col l-8 m-7 c-12">
                     <p><strong>Tư duy nghề nghiệp:</strong>
                         Tạo ra là kết quả của quá trình đầu tư về trí tuệ, thẩm mỹ và tinh thần nhằm mang lại một không gian sống tiện ích và kết nối.
                     </p>
@@ -281,7 +288,7 @@
             <h2 class ="service__title">Dịch vụ</h2>
 
             <div class="service__container row">
-                <div class="service__content col c-4">
+                <div class="service__content col l-4 m-12 c-12">
                     <div href="" class="service__content-wrap">
                         <img class="service__content-img" src="//theme.hstatic.net/1000387172/1000670825/14/h-service_item_1.jpg?v=122" alt="Nextcompany thiết kế nội thất Hiện đại - Sang trọng">
                     </div>
@@ -294,7 +301,7 @@
 
                 </div>
 
-                <div class="service__content col c-4">
+                <div class="service__content col l-4 m-12 c-12">
                     <div href="" class="service__content-wrap">
                         <img class="service__content-img" src="//theme.hstatic.net/1000387172/1000670825/14/h-service_item_2.jpg?v=122" alt="Nextcompany  thi công xây dựng Chuyên nghiệp - Tâm huyết">
                     </div>
@@ -307,7 +314,7 @@
 
                 </div>
 
-                <div class="service__content col c-4">
+                <div class="service__content col l-4 m-12 c-12">
                     <div href="" class="service__content-wrap">
                         <img class="service__content-img" src="//theme.hstatic.net/1000387172/1000670825/14/h-service_item_3.jpg?v=122" alt="Nextcompany  thiết kế kiến trúc  Sáng tạo - Đậm chất phương Tây">
                     </div>
@@ -328,11 +335,13 @@
     <section class="about">
         <div class="grid wide">
             <div class="about__container row">
-                <div class="about__img-wrap col c-4">
-                    <img class="about__img" src="//theme.hstatic.net/1000387172/1000670825/14/h-about_banner.jpg?v=122" alt="Chúng tôi là ai?">
+                <div class="about__img-wrap col l-4 m-4 c-12">
+                    <div class="about__img-w">
+                        <img class="about__img" src="//theme.hstatic.net/1000387172/1000670825/14/h-about_banner.jpg?v=122" alt="Chúng tôi là ai?">
+                    </div>
                 </div>
     
-                <div class="about__content col c-8">
+                <div class="about__content col l-8 m-8 c-12">
                     <h2 class="about__content-title">
                         Chúng tôi là ai?
                     </h2>
@@ -358,9 +367,9 @@
     <section class="parallax lazyload">
         <div class="grid wide">
             <div class="parallax__container row">
-                <div class="parallax__box-content1 col c-6">
+                <div class="parallax__box-content1 col l-4 m-12 c-12">
                     <div class="parallax__fact-counter-wrap row">
-                        <div class="box__some-fact-counter col c-4">
+                        <div class="box__some-fact-counter col l-4 m-4 c-4">
                             <span class="box__fact-cout">
                                 127
                             </span>
@@ -372,7 +381,7 @@
                             </p>
                         </div>
 
-                        <div class="box__some-fact-counter col c-4">
+                        <div class="box__some-fact-counter col l-4 m-4 c-4">
                             <span class="box__fact-cout">
                                 150
                             </span>
@@ -384,7 +393,7 @@
                             </p>
                         </div>
 
-                        <div class="box__some-fact-counter col c-4">
+                        <div class="box__some-fact-counter col l-4 m-4 c-4">
                             <span class="box__fact-cout">
                                 10
                             </span>
@@ -398,7 +407,7 @@
                     </div>
                 </div>
 
-                <div class="parallax__box-content2 col c-6">
+                <div class="parallax__box-content2 col l-8 m-12 c-12">
                     <span>Một vài</span>
                     <h2 class="parallax__title">Điều thú vị về công ty</h2>
                     <p class="parallax__content">
@@ -415,7 +424,7 @@
     <section class="policy">
         <div class="grid wide">
             <div class="policy__container row">
-                <div class="policy__content-wrap policy__support-wrap col c-4">
+                <div class="policy__content-wrap policy__support-wrap col l-4 m-4 c-12">
                     <div class="policy__img-wrap">
                         <img class="policy__img" src="//theme.hstatic.net/1000387172/1000670825/14/h-policy_1.png?v=122" alt="Hỗ trợ">
                     </div>
@@ -429,7 +438,7 @@
                     </p>
                 </div>
 
-                <div class="policy__content-wrap policy__contact-wrap col c-4">
+                <div class="policy__content-wrap policy__contact-wrap col l-4 m-4 c-12">
                     <div class="policy__img-wrap">
                         <img class="policy__img" src="//theme.hstatic.net/1000387172/1000670825/14/h-policy_2.png?v=122" alt="Liên hệ">
                     </div>
@@ -443,7 +452,7 @@
                     </p>
                 </div>
 
-                <div class="policy__content-wrap policy__partner-wrap col c-4">
+                <div class="policy__content-wrap policy__partner-wrap col l-4 m-4 c-12">
                     <div class="policy__img-wrap">
                         <img class="policy__img" src="//theme.hstatic.net/1000387172/1000670825/14/h-policy_3.png?v=122" alt="Hỗ trợ">
                     </div>
@@ -465,7 +474,7 @@
     <section class="whatwedo">
         <div class="grid wide">
             <div class="whatwedo__container row">
-                <div class="whatwedo__graph col c-5">
+                <div class="whatwedo__graph col l-5 m-12 c-12">
                     <div class="whatwedo__graph">
                         <h2 class="graph__title">
                             Dịch vụ CSKH thân thiện
@@ -503,7 +512,7 @@
                     </div>
                 </div>
 
-                <div class="whatwedo__desc col c-7">
+                <div class="whatwedo__desc col l-7 m-12 c-12">
                     <h2 class="desc__title">Chúng tôi làm gì?</h2>
 
                     <p class="desc__first-content">
@@ -528,7 +537,7 @@
                 </h1>
 
                 <div class="blog__content row">
-                    <div class="blog__post col c-6">
+                    <div class="blog__post col l-6 m-6 c-12">
                         <a href="" class="blog__post-img-wrap">
                             <img class="blog__post-img" alt="Căn hộ Flora Apartments" src="https://file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29.jpg">
                         </a>
@@ -540,7 +549,7 @@
                         </div>
                     </div>
 
-                    <div class="blog__post col c-6">
+                    <div class="blog__post col l-6 m-6 c-12">
                         <a href="" class="blog__post-img-wrap">
                             <img class="blog__post-img" alt="Nơi Cuộc Sống Bắt Đầu Với Thiên Nhiên" src="https://file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f.jpg">
                         </a>
@@ -552,7 +561,7 @@
                         </div>
                     </div>
 
-                    <div class="blog__post col c-6">
+                    <div class="blog__post col l-6 m-6 c-12">
                         <a href="" class="blog__post-img-wrap">
                             <img class="blog__post-img" alt="Triangle Concrete House on lake" src="https://file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf.jpg">
                         </a>
@@ -564,7 +573,7 @@
                         </div>
                     </div>
 
-                    <div class="blog__post col c-6">
+                    <div class="blog__post col l-6 m-6 c-12">
                         <a href="" class="blog__post-img-wrap">
                             <img class="blog__post-img" alt="Căn Hộ Đậm Chất Phương Tây" src="https://file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65.jpg">
                         </a>
@@ -590,7 +599,7 @@
     <section class="video">
         <div class="grid wide">
             <div class="video__container row">
-                <a href="https://www.youtube.com/watch?v=aRh_eUQSmIg" target="_blank" class="video__wrap col c-5">
+                <a href="https://www.youtube.com/watch?v=aRh_eUQSmIg" target="_blank" class="video__wrap col l-5 m-5 c-12">
                     <img class="video__img" alt="Văn hoá và hoạt động" src="//theme.hstatic.net/1000387172/1000670825/14/h-video_banner.jpg?v=122">
                     <div class="video__btn-wrap">
                         <div class="video__btn">
@@ -599,7 +608,7 @@
                     </div>
                 </a>
 
-                <div class="video__content col c-7">
+                <div class="video__content col l-7 m-7 c-12">
                     <h2 class="video__title">
                         VĂN HOÁ - HOẠT ĐỘNG
                     </h2>
@@ -644,7 +653,7 @@
             </h2>
 
             <div class="project__container row">
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -661,7 +670,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -678,7 +687,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -695,7 +704,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -712,7 +721,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -729,7 +738,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -746,7 +755,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -763,7 +772,7 @@
                     </a>
                 </div>
 
-                <div class="project__item-wrap col c-3">
+                <div class="project__item-wrap col l-3 m-6 c-12">
                     <a href="" class="project__item">
                         <img class="project__item-img" src="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg" alt=" Incredible House In Scottish Highland ">
                         <div class="project__item-content">
@@ -793,27 +802,27 @@
     <section class="client">
         <div class="grid wide">
             <div class="client__container row">
-                <div class="client__item-wrap col c-2">
+                <div class="client__item-wrap col l-2 m-2 c-4">
                     <img class="client__img" alt="logo 1" src="//theme.hstatic.net/1000387172/1000670825/14/h-partner_item_6.jpg?v=122">
                 </div>
 
-                <div class="client__item-wrap col c-2">
+                <div class="client__item-wrap col l-2 m-2 c-4">
                     <img class="client__img" alt="logo 2" src="//theme.hstatic.net/1000387172/1000670825/14/h-partner_item_7.jpg?v=122">
                 </div>
 
-                <div class="client__item-wrap col c-2">
+                <div class="client__item-wrap col l-2 m-2 c-4">
                     <img class="client__img" alt="logo 3" src="//theme.hstatic.net/1000387172/1000670825/14/h-partner_item_5.jpg?v=122">
                 </div>
 
-                <div class="client__item-wrap col c-2">
+                <div class="client__item-wrap col l-2 m-2 c-4">
                     <img class="client__img" alt="logo 4" src="//theme.hstatic.net/1000387172/1000670825/14/h-partner_item_8.jpg?v=122">
                 </div>
 
-                <div class="client__item-wrap col c-2">
+                <div class="client__item-wrap col l-2 m-2 c-4">
                     <img class="client__img" alt="logo 5" src="//theme.hstatic.net/1000387172/1000670825/14/h-partner_item_1.jpg?v=122">
                 </div>
 
-                <div class="client__item-wrap col c-2">
+                <div class="client__item-wrap col l-2 m-2 c-4">
                     <img class="client__img" alt="logo 6" src="//theme.hstatic.net/1000387172/1000670825/14/h-partner_item_2.jpg?v=122">
                 </div>
 
@@ -827,17 +836,17 @@
         <div class="footer__container">
             <div class="footer__top">
                 <div class="grid wide row">
-                    <div class="footer__top-title col c-2">
+                    <div class="footer__top-title col l-2 m-12 c-12">
                         <i class="fas fa-envelope-open-text"></i>
                         <p>Đăng ký nhận tin</p>
                     </div>
     
-                    <div class="footer__top-input col c-7">
+                    <div class="footer__top-input col l-7 m-12 c-12">
                         <input type="text" placeholder="Nhập email của bạn">
                         <div class="btn btn-more footer__top-btn-submit">Đăng ký</div>
                     </div>
     
-                    <div class="footer__top-contact c-3">
+                    <div class="footer__top-contact l-3 m-12 c-12">
                         <i class="fas fa-phone"></i>
                         <p>Bạn cần hỗ trợ: <a href="tel:1900636099">1900636099</a></p>
                     </div>
@@ -846,7 +855,7 @@
 
             <div class="footer__bottom">
                 <div class="grid wide row">
-                    <div class="footer__bottom-about col c-3">
+                    <div class="footer__bottom-about col l-3 m-6 c-12">
                         <h2 class="footer__bottom-title">giới thiệu</h2>
                         <p class="footer__bottom-content">
                             Chúng tôi mong muốn trở thành nhà cung cấp dịch vụ xây dựng dân dụng giá trị gia tăng, hướng đến trở thành một mô hình chuẩn mực và tiên phong trong lĩnh vực xây dựng tại thị trường Việt Nam.
@@ -864,7 +873,7 @@
                         </div>
                     </div>
     
-                    <div class="footer__bottom-question col c-3">
+                    <div class="footer__bottom-question col l-3 m-6 c-12">
                         <h2 class="footer__bottom-title">pháp lý & câu hỏi</h2>
                         <p class="footer__bottom-content">
                             <span>- Tìm kiếm</span><br>
@@ -875,7 +884,7 @@
                         </p>
                     </div>
     
-                    <div class="footer__bottom-question col c-3">
+                    <div class="footer__bottom-question col l-3 m-6 c-12">
                         <h2 class="footer__bottom-title">Thông tin liên hệ</h2>
                         <p class="footer__bottom-content"><strong>Địa chỉ:</strong> Tầng 4, tòa nhà Flemington, số 182, đường Lê Đại Hành, phường 15, quận 11, Tp. Hồ Chí Minh.</p>
                         <p class="footer__bottom-content"><strong>Điện thoại:</strong> 1900.636.099</p>
@@ -883,7 +892,7 @@
                         <p class="footer__bottom-content"><strong>Email:</strong> hi@haravan.com</p>
                     </div>
     
-                    <div class="footer__bottom-question col c-3">
+                    <div class="footer__bottom-question col l-3 m-6 c-12">
                         <h2 class="footer__bottom-title">fanpage</h2>
                         <p class="footer__bottom-content">
                             Chúng tôi mong muốn trở thành nhà cung cấp dịch vụ xây dựng dân dụng giá trị gia tăng, hướng đến trở thành một mô hình chuẩn mực và tiên phong trong lĩnh vực xây dựng tại thị trường Việt Nam.

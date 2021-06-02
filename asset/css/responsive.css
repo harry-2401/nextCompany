@@ -1,13 +1,230 @@
-@media (min-width: 768) and (max-width: 1239px) {
-    .header__navbar-item-link {
-        font-size: 1.2rem;
+@media (min-width:740px) and (max-width:1239px) {
+    .service__content-wrap {
+        height: auto;
+    }
+
+    .content__img-wrap {
+        margin-right: 100px;
     }
 
     .slider-img__title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
+    .slider-img__content {
+        font-size: 1.5rem;
+    }
+
+    .parallax__fact-counter-wrap span {
+        font-weight: 900;
+    }
+
+    .header__navbar-item {
+        margin-left: 15px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
     html {
-        font-size: 40%;
+        font-size: 50%;
+    }
+
+    .parallax__container .parallax__box-content2 {       
+        padding: 70px 50px;
+    }
+
+    .parallax__title {
+        margin: 0;
+    }
+
+    .box__fact-content {
+        text-align: center;
+    }
+
+    .header__action-search-dropdown {
+        right: -20px;
+    }
+
+    .header__action-search-dropdown::before {
+        right: 20px;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .slider-img__content {
+        font-size: 2rem;
+    }
+
+    .intro__content p:nth-child(2) {
+        padding-bottom: 20px;
+    }
+
+    .parallax__box-content2 {
+        border: none;
+    }
+
+    .parallax__box-content2::before {
+        display: none;
+    }
+
+    .parallax__box-content2::after { 
+        display: none;
+    }
+
+    .footer__bottom-about,
+    .footer__bottom-question {
+        padding-bottom: 40px;
+    }
+
+    .footer__top-title, 
+    .footer__top-contact {
+        justify-content: flex-start;
+    }
+
+    .video__wrap {
+        display: flex;
+        align-items:center;
+    }
+
+    .service__content {
+        margin-bottom: 40px;
+    }
+
+    .about__img-wrap {
+        display: block;
+        align-items: center;
+    }
+
+    .about__img {
+        height:auto;
+    }
+
+    .header__navbar-mobile-icon-wrap {
+        display: block;
+    }
+
+    .header__navbar-list {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: calc(var(--header-height) - 8px);
+        left: 0;
+        width: 100%;
+        height: calc(100% - 8px);
+        background: var(--white-color);
+        z-index: 3;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        margin: 0;
+        overflow: hidden;
+        animation: left_to_right 0.5s linear forwards;
+    }
+
+    .header__navbar-list.active {
+        display: block;
+    }
+    .header__navbar-item-link {
+        height: 0;
+    }
+
+    .header__navbar-item-link-icon {
+        display: none;
+    } 
+
+    .header__navbar-mobile-icon-right {
+       display: inline-block;
+       text-align: right;
+    }
+
+    .header__navbar-item-dropdown {
+       width: 100%;
+       height: 100%;
+       top: 0;
+       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+       background-color: #f6f7f8;
+    }
+
+    .header__navbar-item:hover .header__navbar-item-dropdown {
+        background-color: var(--white-color);
+        animation: left_to_right 0.5s linear forwards;
+        display: block;
+        z-index: 1;
+    }
+
+    .header__navbar-list.active {
+        display: flex;
+    }
+
+    .header__navbar-item ~ .header__navbar-item {
+        margin-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .video__content {
+        padding: 40px 20px;
+    }
+
+    .about__content {
+        padding: 50px 20px;
+    }
+
+    .parallax__box-content2 {
+        padding-top: 0;
+    }
+
+    .parallax__fact-counter-wrap {
+        justify-content: space-evenly;
+    }
+
+    .whatwedo__container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .whatwedo__graph {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 740px) and (max-width:1023px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 739px) {
+    html {
+        font-size: 35%;
+    }
+
+    .header__logo img {
+        max-width: 85%;
+        max-height: 40px;
+    }
+
+    .header__navbar-mobile-icon-wrap {
+        font-size: 3rem;
+    }
+    
+    .slider__content-wrap.active {
+        position: relative;
+    }
+
+    .content__img-wrap {
+        position: absolute;
+        margin-right: 15%;
+    }
+
+    .slider-img__title {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes left_to_right {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 0;
     }
 }
