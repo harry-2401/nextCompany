@@ -219,6 +219,24 @@
     .slider-img__title {
         font-size: 2.5rem;
     }
+
+    .header__action-search-dropdown {
+        width: 250px;
+        right: 0;
+    }
+
+    .header__action-search-dropdown::before {
+        right: 2px;
+    }
+
+    .header__action-account-dropdown {
+        right: -40px;
+    }
+
+    .header__action-account-dropdown::before {
+        right: 40px;
+    }
+
 }
 
 @keyframes slider_content_2 {
